@@ -7,24 +7,42 @@
 </head>
 <body>
 
-	<div class="flex justify-between bg-sky-800	 p-4 h-15 text-cyan-800	">
-		<div class="text-2xl font-bold text-white">PW Academy</div>
-		<div class="text-white">
-			<a href="" class="px-3 text-xl ">Home</a>
-			<a href=""class="px-3 text-xl">About</a>
-			<a href=""class="px-3 text-xl">Services</a>
-			<a href=""class="px-3 text-xl ">Premeium</a>
-			<a href=""class="px-3 italic mr-5 text-xl py-2 bg-sky-800 text-white rounded hover:bg-sky-900	">Login</a>
+	
+	<nav class="p-5 shadow md:flex md:items-center md:justify-between bg-sky-800 		">
+		<div class="flex justify-between items-center ">
+		  <span class="text-2xl font-[Poppins] cursor-pointer text-white">
+			
+			PW Academy
+		  </span>
+	
+		  <span class="text-3xl cursor-pointer mx-2 md:hidden block text-white">
+			<ion-icon name="menu" onclick="Menu(this)"></ion-icon>
+		  </span>
 		</div>
-	</div>
-	<div class=" flex text-white italic bg-sky-900  h-80 justify-between">
-		<div>
-			<h2 class="font-bold text-6xl mt-20 ml-16">
-				Welcome To <br> The PW !
-			</h2>
-		</div>
-		<!-- <img src="Net.png" class="h-60 w-60 mt-20 	"> -->
-	</div>
+	
+		<ul class="md:flex md:items-center z-[-1] md:z-auto md:static absolute bg-sky-950 md:bg-sky-800 ham text-white	 w-full left-0 md:w-auto md:py-0 py-4 md:pl-0 pl-7 md:opacity-100 opacity-0 top-[-400px] transition-all ease-in duration-500">
+		  <li class="mx-4 my-6 md:my-0">
+			<a href="#" class="text-xl hover:text-cyan-500 duration-500">HOME</a>
+		  </li>
+		  <li class="mx-4 my-6 md:my-0">
+			<a href="#" class="text-xl hover:text-cyan-500 duration-500">SERVICE</a>
+		  </li>
+		  <li class="mx-4 my-6 md:my-0">
+			<a href="#" class="text-xl hover:text-cyan-500 duration-500">ABOUT</a>
+		  </li>
+		  <li class="mx-4 my-6 md:my-0">
+			<a href="#" class="text-xl hover:text-cyan-500 duration-500">CONTACT</a>
+		  </li>
+		  <li class="mx-4 my-6 md:my-0">
+			<a href="#" class="text-xl hover:text-cyan-500 duration-500">BLOG'S</a>
+		  </li>
+	
+		  <button class="bg-cyan-400 text-white font-[Poppins] duration-500 px-6 py-2 mx-4 hover:bg-cyan-500 rounded ">
+			Login
+		  </button>
+	<h2 class=""></h2>
+		</ul>
+	  </nav>
 
 	<div class="max-w-[1320px] mx-auto" >
 		<h1 class="text-center font-bold py-5 text-4xl">Featured Products</h1>
@@ -207,4 +225,15 @@
 		</div>
 	
 </body>
+	
+<script>
+	  function Menu(e){
+      let list = document.querySelector('ul');
+      e.name === 'menu' ? (e.name = "close",list.classList.add('top-[80px]') , list.classList.add('opacity-100')) 
+	  :( e.name = "menu" ,list.classList.remove('top-[80px]'),list.classList.remove('opacity-100'))
+    }
+</script>
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
 </html>
